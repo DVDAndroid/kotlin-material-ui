@@ -1,21 +1,20 @@
-package materialui.icons.components.class
+package materialui.icons.components.`class`
 
 import kotlinx.html.SVG
 import kotlinx.html.Tag
 import kotlinx.html.TagConsumer
 import materialui.components.svgicon.enums.SvgIconStyle
+import materialui.icons.Class
 import materialui.icons.components.svgicon.SvgIconElementBuilder
 import react.RBuilder
 
-fun RBuilder.
-class(
+fun RBuilder.`class`(
     vararg classMap: Pair<SvgIconStyle, String>,
-    block: SvgIconElementBuilder<SVG>.() -> Unit
+    block: SvgIconElementBuilder<SVG>.() -> Unit,
 ) = child(SvgIconElementBuilder(Class, classMap.toList()) { SVG(mapOf(), it) }.apply(block).create())
 
-fun <T : Tag> RBuilder.
-class(
+fun <T : Tag> RBuilder.`class`(
     vararg classMap: Pair<SvgIconStyle, String>,
     factory: (TagConsumer<Unit>) -> T,
-    block: SvgIconElementBuilder<T>.() -> Unit
+    block: SvgIconElementBuilder<T>.() -> Unit,
 ) = child(SvgIconElementBuilder(Class, classMap.toList(), factory).apply(block).create())

@@ -32,6 +32,7 @@ kotlin {
             dependencies {
                 implementation(project(":core"))
                 implementation(project(":lab"))
+                implementation(project(":icons"))
                 // implementation(project(":pickers"))
                 // implementation(project(":pickers:date-io:date-fns"))
                 implementation(Libraries.Kotlin.js)
